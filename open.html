@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirect Test</title>
+</head>
+<body>
+  <h1>Open Redirect Test</h1>
+  <form id="redirectForm">
+    <label for="redirectUrl">Enter URL:</label>
+    <input type="text" id="redirectUrl" name="redirectUrl">
+    <button type="submit">Redirect</button>
+  </form>
+
+  <script>
+    document.getElementById('redirectForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const url = document.getElementById('redirectUrl').value;
+      window.location.href = url; // Redirect to the provided URL
+    });
+  </script>
+</body>
+</html>
